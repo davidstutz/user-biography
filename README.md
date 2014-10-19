@@ -4,6 +4,16 @@ A wordpress plugin aiming to provide a timeline-like user biography - users may 
 
 **Work in progress.**
 
+## Usage
+
+After activating the plugin, navigate to "Users" > "Your Profile". Below "About Yourself" you will find an additional section "Biography":
+
+![Additional "Biography" section in "Your Profile".](screenshot.png?raw=true 'Additional "Biography" section in "Your Profile".')
+
+The form allows to add so-called "Parts" to your biography.
+
+In order to query these parts in your template, query for posts with type `ub_part`.
+
 ## License
 
 Copyright (C) 2014 David Stutz
@@ -11,3 +21,5 @@ Copyright (C) 2014 David Stutz
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+See [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
