@@ -248,4 +248,4 @@ class User_Biography {
 
 add_action('init', 'User_Biography::register_post_type');
 add_action('show_user_profile', 'User_Biography::show_user_profile');
-add_action('edit_user_profile_update', 'User_Biography::update_biography');
+add_action('profile_personal_options', 'User_Biography::update_biography');
