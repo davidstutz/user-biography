@@ -129,15 +129,15 @@ class User_Biography {
                     <th>
                         <select name="<?php echo User_Biography::PART_MONTH_NAME_PREFIX . $post->ID; ?>">
                             <?php $month = get_the_date('n'); ?>
-                            <option value="1" <?php if ($month == 1): ?>selected<?php endif; ?>><?php echo __('Jan', 'user_biography'); ?>-1</option>
-                            <option value="2" <?php if ($month == 2): ?>selected<?php endif; ?>><?php echo __('Feb', 'user_biography'); ?>-2</option>
-                            <option value="3" <?php if ($month == 3): ?>selected<?php endif; ?>><?php echo __('Mar', 'user_biography'); ?>-3</option>
-                            <option value="4" <?php if ($month == 4): ?>selected<?php endif; ?>><?php echo __('Apr', 'user_biography'); ?>-4</option>
-                            <option value="5" <?php if ($month == 5): ?>selected<?php endif; ?>><?php echo __('May', 'user_biography'); ?>-5</option>
-                            <option value="6" <?php if ($month == 6): ?>selected<?php endif; ?>><?php echo __('Jun', 'user_biography'); ?>-6</option>
-                            <option value="7" <?php if ($month == 7): ?>selected<?php endif; ?>><?php echo __('Jul', 'user_biography'); ?>-7</option>
-                            <option value="8" <?php if ($month == 8): ?>selected<?php endif; ?>><?php echo __('Aug', 'user_biography'); ?>-8</option>
-                            <option value="9" <?php if ($month == 9): ?>selected<?php endif; ?>><?php echo __('Sep', 'user_biography'); ?>-9</option>
+                            <option value="01" <?php if ($month == 1): ?>selected<?php endif; ?>><?php echo __('Jan', 'user_biography'); ?>-1</option>
+                            <option value="02" <?php if ($month == 2): ?>selected<?php endif; ?>><?php echo __('Feb', 'user_biography'); ?>-2</option>
+                            <option value="03" <?php if ($month == 3): ?>selected<?php endif; ?>><?php echo __('Mar', 'user_biography'); ?>-3</option>
+                            <option value="04" <?php if ($month == 4): ?>selected<?php endif; ?>><?php echo __('Apr', 'user_biography'); ?>-4</option>
+                            <option value="05" <?php if ($month == 5): ?>selected<?php endif; ?>><?php echo __('May', 'user_biography'); ?>-5</option>
+                            <option value="06" <?php if ($month == 6): ?>selected<?php endif; ?>><?php echo __('Jun', 'user_biography'); ?>-6</option>
+                            <option value="07" <?php if ($month == 7): ?>selected<?php endif; ?>><?php echo __('Jul', 'user_biography'); ?>-7</option>
+                            <option value="08" <?php if ($month == 8): ?>selected<?php endif; ?>><?php echo __('Aug', 'user_biography'); ?>-8</option>
+                            <option value="09" <?php if ($month == 9): ?>selected<?php endif; ?>><?php echo __('Sep', 'user_biography'); ?>-9</option>
                             <option value="10" <?php if ($month == 10): ?>selected<?php endif; ?>><?php echo __('Oct', 'user_biography'); ?>-10</option>
                             <option value="11" <?php if ($month == 11): ?>selected<?php endif; ?>><?php echo __('Nov', 'user_biography'); ?>-11</option>
                             <option value="12" <?php if ($month == 12): ?>selected<?php endif; ?>><?php echo __('Dec', 'user_biography'); ?>-12</option>
@@ -198,7 +198,7 @@ class User_Biography {
 
                         $part->post_date = $date . ' 00:00:00';
                         $part->post_date_gmt = $date . ' 00:00:00';
-                        $part->name = $user->user_login . '-' . str_replace(' 00:00:00', '', $date);
+                        $part->name = $user->user_login . '-' . $date;
 
                         wp_update_post($part);
                     }
@@ -208,7 +208,7 @@ class User_Biography {
             if (isset($_POST[User_Biography::ADD_PART_CHECKBOX_NAME])) {
 
                 $new_part_content = sanitize_text_field($_POST[User_Biography::ADD_PART_TEXTAREA_NAME]);
-                $date = date('Y-m-d') . '00:00:00';
+                $date = date('Y-m-d') . ' 00:00:00';
 
                 if (!empty($new_part_content)) {
 
