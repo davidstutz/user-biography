@@ -4,6 +4,10 @@ A wordpress plugin aiming to provide a timeline-like user biography - users may 
 
 **Work in progress.**
 
+## Installation
+
+In `wp-content/plugins`, create a new folder `user-biography` and put all files within this repository in this folder. In the backend, go to "Plugins" -> "Installed Plugins" and activate "User Biography".
+
 ## Usage
 
 After activating the plugin, navigate to "Users" > "Your Profile". Below "About Yourself" you will find an additional section "Biography":
