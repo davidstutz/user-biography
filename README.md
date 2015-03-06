@@ -2,8 +2,6 @@
 
 A wordpress plugin aiming to provide a timeline-like user biography - users may add biographical parts over time which may then be displayed on the user's page in a timeline.
 
-**Work in progress.**
-
 ## Installation
 
 In `wp-content/plugins`, create a new folder `user-biography` and put all files within this repository in this folder. In the backend, go to "Plugins" -> "Installed Plugins" and activate "User Biography".
