@@ -1,4 +1,4 @@
-# Wordpress Plugin: User Biography
+# Wordpress User Biography
 
 A wordpress plugin aiming to provide a timeline-like user biography - users may add biographical parts over time which may then be displayed on the user's page in a timeline.
 
@@ -18,7 +18,7 @@ In order to query these parts in your template, query for posts with type `ub_pa
 
 ## License
 
-Copyright (C) 2014 David Stutz
+Copyright (C) 2014 - 2015 David Stutz
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
